@@ -15,6 +15,7 @@ export function DownloadButton({isReverse, btnLabel}: DownloadButtonProps) {
     const [email, setEmail] = useState('');
 
     const handleClickOpen = () => {
+        console.log("URL utilisée :", sheetsUrl);
         fetch(sheetsUrl, {
             method: 'POST',
             mode: 'no-cors',
@@ -42,6 +43,7 @@ export function DownloadButton({isReverse, btnLabel}: DownloadButtonProps) {
 
     function submitEmail(e: React.FormEvent<HTMLFormElement>){
         e.preventDefault();
+        console.log("URL utilisée :", sheetsUrl);
         fetch(sheetsUrl, {
             method: 'POST',
             mode: 'no-cors',
