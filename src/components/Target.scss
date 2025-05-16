@@ -1,0 +1,125 @@
+@font-face {
+  font-family: Varien;
+  src: url('../assets/fonts/Varien.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Mundial;
+  src: url('../assets/fonts/MundialRegular.otf') format('opentype');
+}
+
+.target {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+
+  h2 {
+    color: var(--Primary-500, #F96E3E);
+    text-align: center;
+    font-family: Varien;
+    font-size: 88px;
+    font-weight: 400;
+    padding-bottom: 5%;
+    width: 50%;
+  }
+
+  .line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+
+    .player-line,
+    .gm-line {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+      gap: 20px;
+    }
+
+    .player-arrow,
+    .player-arrow.hidden {
+      background-image: url("/escapeplayerarrow.svg");
+      width: 24px;
+      height: 37px;
+    }
+    .player-arrow.hidden { visibility: hidden; }
+
+    .gm-arrow,
+    .gm-arrow.hidden {
+      background-image: url("/gamemasterarrow.svg");
+      width: 24px;
+      height: 37px;
+    }
+    .gm-arrow.hidden { visibility: hidden; }
+
+    .player-title,
+    .player-title-active,
+    .gm-title,
+    .gm-title-active {
+      font-family: Varien;
+      font-size: 48px;
+      font-weight: 400;
+    }
+    .player-title-active { color: var(--Primary-900, #7C1A12); }
+    .player-title {
+      color: rgba(124, 26, 18, 0.5);
+      cursor: pointer;
+    }
+    .gm-title-active { color: var(--Secondary-950, #28272A); }
+    .gm-title {
+      color: rgba(40, 39, 42, 0.5);
+      cursor: pointer;
+    }
+  }
+
+  .target-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+
+    .bonhommegauche,
+    .bonhommegauchedesac,
+    .bonhommedroite,
+    .bonhommedroitedesac {
+      background-size: cover;
+      width: 150px;
+      height: 450px;
+    }
+    .bonhommegauche { background-image: url("/bonhommegauche.svg"); }
+    .bonhommegauchedesac { background-image: url("/bonhommegauchedesac.svg"); }
+    .bonhommedroite { background-image: url("/bonhommedroite.svg"); }
+    .bonhommedroitedesac { background-image: url("/bonhommedroitedesac.svg"); }
+
+    .content-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+
+      .gamemaster-container,
+      .player-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 20px;
+
+        p {
+          font-family: Mundial;
+          font-size: 36px;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      .gamemaster-container p { color: var(--Secondary-950, #28272A); }
+      .player-container p { color: var(--Primary-900, #7C1A12); }
+    }
+  }
+}

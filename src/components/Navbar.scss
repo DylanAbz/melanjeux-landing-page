@@ -1,0 +1,76 @@
+@font-face {
+    font-family: Varien;
+    src: url('../assets/fonts/Varien.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Mundial;
+    src: url('../assets/fonts/MundialRegular.otf') format('opentype');
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+    background: #FFEDE2;
+    color: #F96E3E;
+    z-index: 2;
+    padding: 16px;
+
+    color: var(--Primary-500, #F96E3E);
+    font-family: Mundial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .logo {
+        display: flex;
+        padding-left: 5%;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .navbar-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        gap: 16px;
+        padding: 4px 16px;
+    }
+
+    .download-button {
+        margin-right: 16px;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .navbar {
+        padding: 8px 8px;
+
+        .navbar-menu {
+            gap: 8px;
+            padding: 0;
+        }
+
+        // Masquer les liens, garder que le bouton télécharger
+        a[href="/about"],
+        a[href="/contact"] {
+            display: none;
+        }
+    }
+}
