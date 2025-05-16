@@ -4,18 +4,62 @@ import "./DownloadButton.scss";
 
 interface DownloadButtonProps {
     isReverse: boolean,
-    btnLabel: String
+    btnLabel: string
 }
+
+const sheetsUrl = process.env.REACT_APP_SHEETS_URL!;
 
 export function DownloadButton({isReverse, btnLabel}: DownloadButtonProps) {
     const [open, setOpen] = useState(false);
+    const [showForm, setShowForm] = useState(false);
+    const [email, setEmail] = useState('');
+
     const handleClickOpen = () => {
+        fetch(sheetsUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                source: 'DownloadButton',
+                type: 'click'
+            })
+        }).then(() => {
+            console.log("réussi");
+        });
         setOpen(true);
     };
+
+    const handleShowForm = () => {
+        setShowForm(true);
+    };
+
 
     const handleClose = () => {
         setOpen(false);
     };
+
+    function submitEmail(e: React.FormEvent<HTMLFormElement>){
+        e.preventDefault();
+        fetch(sheetsUrl, {
+            method: 'POST',
+            mode: 'no-cors',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                source: 'DownloadButton',
+                type: 'email',
+                email: email
+            })
+        });
+
+        setOpen(false);
+        setShowForm(false);
+        setEmail('');
+    };
+
     return (
         <div className="download-button">
             <button onClick={handleClickOpen} className={isReverse ? "btn-download-reverse" : "btn-download"}>
@@ -34,22 +78,49 @@ export function DownloadButton({isReverse, btnLabel}: DownloadButtonProps) {
                     {"Téléchargement"}
                 </DialogTitle>
                 <DialogContent>
-                    <DialogContentText id="alert-dialog-description">
-                        Merci pour l’intérêt que vous portez à notre projet !
-                    </DialogContentText>
-                    <DialogContentText id="alert-dialog-description">
-                        Notre application est en cours de préparation… et on a hâte de vous la faire découvrir !
-                    </DialogContentText>
-                    <DialogContentText id="alert-dialog-description">
-                        👉 Laissez-nous votre adresse mail et soyez les premiers à embarquer dès sa sortie. 👀🔐
-                    </DialogContentText>
+                    {showForm ? (
+                        <>
+                            <DialogContentText className="email-form-text">
+                                Laisse-nous ton adresse mail, on te contactera dès la sortie de Mélanjeux !
+                            </DialogContentText>
+                            <form className="email-form" onSubmit={(e) => {submitEmail(e);}}>
+                                <input
+                                    type="email"
+                                    required
+                                    placeholder="tonadresse@email.com"
+                                    value={email}
+                                    onChange={(e) => setEmail(e.target.value)}
+                                    className="email-input"
+                                />
+                                <Button type="submit" className="contact-btn" autoFocus>
+                                    Envoyer
+                                </Button>
+                            </form>
+                        </>
+                    ) : (
+                        <>
+                            <DialogContentText>
+                                Merci pour l’intérêt que vous portez à notre projet !
+                            </DialogContentText>
+                            <DialogContentText>
+                                Notre application est en cours de préparation… et on a hâte de vous la faire découvrir !
+                            </DialogContentText>
+                            <DialogContentText>
+                                👉 Laissez-nous votre adresse mail et soyez les premiers à embarquer dès sa sortie. 👀🔐
+                            </DialogContentText>
+                        </>
+                    )}
                 </DialogContent>
+
                 <DialogActions>
                     <Button onClick={handleClose} className="quit-btn">Quitter</Button>
-                    <Button onClick={handleClose} className="contact-btn" autoFocus>
-                        Je veux garder contact !
-                    </Button>
+                    {!showForm && (
+                        <Button onClick={handleShowForm} className="contact-btn" autoFocus>
+                            Je veux garder contact !
+                        </Button>
+                    )}
                 </DialogActions>
+
             </Dialog>
         </div>
     )
