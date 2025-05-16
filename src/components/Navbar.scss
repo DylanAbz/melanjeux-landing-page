@@ -35,11 +35,7 @@
     }
 
     .logo {
-        display: flex;
-        padding-left: 5%;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
+        padding-left: 64px;
         flex-shrink: 0;
     }
 
@@ -48,8 +44,10 @@
         justify-content: center;
         align-items: center;
         flex-shrink: 0;
-        gap: 16px;
-        padding: 4px 16px;
+        gap: 24px;
+        padding-top: 24px;
+        padding-bottom: 24px;
+        padding-right: 64px;
     }
 
     .download-button {
