@@ -9,6 +9,7 @@
 }
 
 .target {
+  padding-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -109,7 +110,7 @@
         flex-direction: column;
         align-items: flex-start;
         justify-content: space-between;
-        gap: 20px;
+        gap: 40px;
 
         p {
           font-family: Mundial;
@@ -120,6 +121,92 @@
       }
       .gamemaster-container p { color: var(--Secondary-950, #28272A); }
       .player-container p { color: var(--Primary-900, #7C1A12); }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .target {
+    h2 {
+      font-size: 56px;
+      width: 80%;
+    }
+    .line {
+      gap: 24px;
+      .player-title,
+      .player-title-active,
+      .gm-title,
+      .gm-title-active {
+        font-size: 32px;
+      }
+    }
+    .target-content {
+      .bonhommegauche,
+      .bonhommegauchedesac,
+      .bonhommedroite,
+      .bonhommedroitedesac {
+        width: 96px;
+        height: 320px;
+      }
+      .content-container {
+        width: 80%;
+        margin-left:  16px;
+        margin-right:  16px;
+        .gamemaster-container,
+        .player-container {
+          gap: 24px;
+          p { font-size: 24px; }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .target {
+    padding-top: 16px;
+    h2 {
+      font-size: 24px;
+      width: 100%;
+      padding-bottom: 8%;
+    }
+    .line {
+      gap: 8px;
+      .player-title,
+      .player-title-active,
+      .gm-title,
+      .gm-title-active {
+        font-size: 16px;
+      }
+      .player-arrow,
+      .player-arrow.hidden,
+      .gm-arrow,
+      .gm-arrow.hidden {
+        display: none;
+      }
+
+    }
+    .target-content {
+      padding-top:  16px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      .bonhommegauche,
+      .bonhommegauchedesac,
+      .bonhommedroite,
+      .bonhommedroitedesac {
+        display: none;
+      }
+
+      .content-container {
+        width: 100%;
+        .gamemaster-container,
+        .player-container {
+          gap: 8px;
+          p { font-size: 12px; }
+        }
+      }
     }
   }
 }

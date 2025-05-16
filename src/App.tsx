@@ -2,6 +2,7 @@ import './App.scss'
 import {Navbar} from "./components/Navbar.tsx";
 import {DownloadButton} from "./components/DownloadButton.tsx";
 import {Target} from "./components/Target.tsx";
+import {Team} from "./components/Team.tsx";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
             <DownloadButton btnLabel="Je rejoins l'aventure" isReverse={false}/>
         </div>
         <Target/>
+        <Team/>
     </div>
   )
 }

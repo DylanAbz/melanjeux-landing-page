@@ -1,0 +1,70 @@
+.team-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 72px;
+  background: #FFEDE2;
+  padding-bottom: 120px;
+    padding-top: 80px;
+
+  h2 {
+    color: var(--Primary-500, #F96E3E);
+    text-align: center;
+
+    /* Titre2 */
+    font-family: Varien;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  p {
+    color: var(--Primary-500, #F96E3E);
+    text-align: center;
+
+    /* Sous-titre1 */
+    font-family: Mundial;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 43.2px */
+  }
+
+  .person-container {
+    display: flex;
+    flex-wrap: wrap;              // permet le retour à la ligne
+    justify-content: space-around;
+    align-items: stretch;         // ou "flex-start" selon ton besoin
+    gap: 1rem;                    // ajoute un peu d'espace entre les éléments
+  }
+
+  .mission-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    p {
+      color: var(--Primary-500, #F96E3E);
+      text-align: center;
+
+      /* Sous-titre1 */
+      font-family: Mundial;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 43.2px */
+    }
+  }
+
+  .values-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+
+}
