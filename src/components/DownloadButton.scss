@@ -12,8 +12,15 @@
     text-decoration: none;
     border-radius: 24px;
     border: 1px solid #FFEDE2;
-    color: #FFEDE2;
     background-color: #F96E3E;
+    color: var(--Primary-50, #FFFAF7);
+
+    /* Texte */
+    font-family: Mundial;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 .btn-download:hover {
     border: 1px solid #FFEDE2;

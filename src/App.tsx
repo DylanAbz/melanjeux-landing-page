@@ -3,6 +3,7 @@ import {Navbar} from "./components/Navbar.tsx";
 import {DownloadButton} from "./components/DownloadButton.tsx";
 import {Target} from "./components/Target.tsx";
 import {Team} from "./components/Team.tsx";
+import {Footer} from "./components/Footer.tsx";
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         </div>
         <Target/>
         <Team/>
+        <Footer/>
     </div>
   )
 }
