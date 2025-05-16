@@ -5,7 +5,7 @@ import {CardValue} from "./CardValue.tsx";
 
 export function Team() {
     return (
-        <div className="team-container">
+        <div className="team-container" id="about">
             <DownloadButton isReverse={false} btnLabel={"Télécharger l'application"}/>
             <h2>L'équipe Melanjeux</h2>
             <p className="student-text">Étudiant.e.s à MyDigitalSchool Grenoble,  nous formons une équipe aussi diverse que soudée, par nos compétences comme par nos personnalités.</p>

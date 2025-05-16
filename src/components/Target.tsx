@@ -15,7 +15,7 @@ export function Target () {
     }
 
     return (
-        <div className="target">
+        <div className="target" id="who">
             <h2>C'est pour toi si tu es ...</h2>
             <div className="line">
                 <div className="player-line">
