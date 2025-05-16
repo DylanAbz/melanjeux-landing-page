@@ -18,6 +18,13 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+    @media (max-width: 1024px) {
+      font-size: 40px;
+    }
+    @media (max-width: 600px) {
+      font-size: 24px;
+    }
   }
 
   p {
@@ -30,6 +37,14 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 43.2px */
+
+
+    @media (max-width: 1024px) {
+      font-size: 24px;
+    }
+    @media (max-width: 600px) {
+      font-size: 14px;
+    }
   }
 
   .person-container {

@@ -9,12 +9,14 @@
 }
 
 .target {
-  padding-top: 50px;
+  padding-top: 56px;
+  padding-bottom: 56px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   background-color: #fff;
+
 
   h2 {
     color: var(--Primary-500, #F96E3E);
