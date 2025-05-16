@@ -70,6 +70,7 @@ export function DownloadButton({isReverse, btnLabel}: DownloadButtonProps) {
                 onClose={handleClose}
                 aria-labelledby="alert-dialog-title"
                 aria-describedby="alert-dialog-description"
+                maxWidth={"lg"}
                 PaperProps={{
                     className: 'download-popup'
                 }}

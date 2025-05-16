@@ -73,10 +73,16 @@
       color: rgba(124, 26, 18, 0.5);
       cursor: pointer;
     }
+    .player-title:hover{
+      color: var(--Primary-900, #7C1A12);
+    }
     .gm-title-active { color: var(--Secondary-950, #28272A); }
     .gm-title {
       color: rgba(40, 39, 42, 0.5);
       cursor: pointer;
+    }
+    .gm-title:hover{
+      color: var(--Secondary-950, #28272A);
     }
   }
 
@@ -212,4 +218,22 @@
       }
     }
   }
+}
+
+.fade {
+  opacity: 0;
+  transition: opacity 0.1s;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+}
+
+.fade.show {
+  opacity: 1;
+  pointer-events: auto;
+  position: static;
+  transition: opacity 0.1s;
+}
+.content-container {
+  position: relative; // pour le positionnement absolu des fades
 }

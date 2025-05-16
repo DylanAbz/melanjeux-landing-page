@@ -6,7 +6,8 @@
   gap: 72px;
   background: #FFEDE2;
   padding-bottom: 120px;
-    padding-top: 80px;
+  padding-top: 80px;
+  border-radius: 24px 24px 0 0;
 
   h2 {
     color: var(--Primary-500, #F96E3E);
@@ -27,6 +28,10 @@
     }
   }
 
+  .student-text {
+    width: 55%;
+  }
+
   p {
     color: var(--Primary-500, #F96E3E);
     text-align: center;
@@ -37,8 +42,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: 120%; /* 43.2px */
-
-
     @media (max-width: 1024px) {
       font-size: 24px;
     }
@@ -49,10 +52,10 @@
 
   .person-container {
     display: flex;
-    flex-wrap: wrap;              // permet le retour à la ligne
+    flex-wrap: wrap; // permet le retour à la ligne
     justify-content: space-around;
-    align-items: stretch;         // ou "flex-start" selon ton besoin
-    gap: 1rem;                    // ajoute un peu d'espace entre les éléments
+    align-items: stretch; // ou "flex-start" selon ton besoin
+    gap: 1rem; // ajoute un peu d'espace entre les éléments
   }
 
   .mission-container {

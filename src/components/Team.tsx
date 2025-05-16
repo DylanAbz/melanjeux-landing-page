@@ -8,7 +8,7 @@ export function Team() {
         <div className="team-container">
             <DownloadButton isReverse={false} btnLabel={"Télécharger l'application"}/>
             <h2>L'équipe Melanjeux</h2>
-            <p>Étudiant.e.s à MyDigitalSchool Grenoble,  nous formons une équipe aussi diverse que soudée, par nos compétences comme par nos personnalités.</p>
+            <p className="student-text">Étudiant.e.s à MyDigitalSchool Grenoble,  nous formons une équipe aussi diverse que soudée, par nos compétences comme par nos personnalités.</p>
             <div className="person-container">
                 <Person imagePath={"/flo.svg"} name={"Florian"} role={"DESIGNER GRAPHIQUE"} nickname={"Le fonceur"}/>
                 <Person imagePath={"/dylan.svg"} name={"Dylan"} role={"DÉVELOPPEUR"} nickname={"Le leader"}/>
