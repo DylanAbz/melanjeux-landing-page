@@ -54,6 +54,27 @@
     }
 }
 
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 16px 8px;
+
+        .navbar-menu {
+            gap: 16px;
+            padding: 0;
+        }
+
+        .logo {
+            padding-left: 16px;
+        }
+
+        .who-navbar,
+        .about-navbar {
+            display: none;
+        }
+    }
+
+}
+
 
 @media (max-width: 600px) {
     .navbar {
@@ -64,10 +85,18 @@
             padding: 0;
         }
 
+        .logo {
+            padding-left: 8px;
+        }
+
         // Masquer les liens, garder que le bouton télécharger
-        a[href="/about"],
-        a[href="/contact"] {
+        .who-navbar,
+        .about-navbar {
             display: none;
+        }
+
+        .download-button {
+            margin-right: 24px;
         }
     }
 }

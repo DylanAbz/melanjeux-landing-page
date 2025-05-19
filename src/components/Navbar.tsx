@@ -8,8 +8,8 @@ export function Navbar() {
                 <img src="/logom.svg" alt="Logo" />
             </div>
             <div className="navbar-menu">
-                <a href="#who">Pour qui ?</a>
-                <a href="#about">À propos de nous</a>
+                <a href="#who" className="who-navbar">Pour qui ?</a>
+                <a href="#about" className="about-navbar">À propos de nous</a>
                 <DownloadButton btnLabel="Télécharger" isReverse={true}/>
             </div>
         </nav>
