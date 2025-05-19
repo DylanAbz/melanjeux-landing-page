@@ -10,7 +10,7 @@ export function Footer() {
                 <p>Contactez-nous pour échanger et découvrir comment faire partie de l’aventure.🕵🏻</p>
             </div>
             <DownloadButton isReverse={false} btnLabel={"Je rejoins l'aventure"}/>
-            <p>📩 contactmelanjeux@gmail.com</p>
+            <p>📩 contact.melanjeux@gmail.com</p>
             <img src="/logo.svg" alt="LogoEntier"/>
         </div>
     )
