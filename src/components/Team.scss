@@ -83,6 +83,16 @@
     justify-content: space-around;
     gap: 1rem;
     align-items: flex-start;
+
+    @media (min-width: 1380px) {
+      height: 120px;
+    }
+    @media (min-width: 680px) {
+      height: 160px;
+    }
+    @media (max-width: 680px) {
+      height: 360px;
+    }
   }
 
 }
